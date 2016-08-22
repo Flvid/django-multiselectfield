@@ -132,7 +132,7 @@ class MultiSelectField(models.CharField):
             setattr(cls, 'get_%s_list' % self.name, get_list)
             setattr(cls, 'get_%s_display' % self.name, get_display)
 
-MultiSelectField = add_metaclass(models.SubfieldBase)(MultiSelectField)
+# MultiSelectField = add_metaclass(models.SubfieldBase)(MultiSelectField)
 
 try:
     from south.modelsinspector import add_introspection_rules
